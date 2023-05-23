@@ -1,6 +1,7 @@
+import styles from './Footer.module.css';
 function Footer(){
     return (
-        <h2>Footer</h2>
+        <p className={styles.footer}>© CoinBounce 2023</p>
     );
 }
 
