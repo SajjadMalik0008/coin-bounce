@@ -77,14 +77,9 @@ function Login(){
             disabled={
                 !values.username || 
                 !values.password ||
-                !values.confirmPassword ||
-                !values.name ||
-                !values.email || 
                 errors.username || 
-                errors.password ||
-                errors.confirmPassword ||
-                errors.name ||
-                errors.email  }
+                errors.password 
+               }
             >Log in</button>
             <span>Don't have an account? <button className={styles.createAccount} onClick={() =>    navigate('/signup')}>Register</button></span>
             {error !== "" ? <p className={styles.errorMessage}>{error}</p> : ""}

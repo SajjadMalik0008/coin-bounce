@@ -8,6 +8,8 @@ import Error from "./pages/Error/Error";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/signup/signup";
 import Crypto from "./pages/Crypto/crypto";
+import Blog from "./pages/Blogs/Blog";
+import SubmitBlog from "./pages/SubmitBlog/SubmitBlog";
 import { useSelector } from "react-redux";
 
 // 3345848
@@ -39,7 +41,7 @@ function App() {
               exact
               element={
                 <Protected isAuth={isAuth}>
-                  <div className="main">Crypto page</div>
+                  <div className="main"><Blog/></div>
                 </Protected>
               }
             />
@@ -48,7 +50,7 @@ function App() {
               exact
               element={
                 <Protected isAuth={isAuth}>
-                  <div className="main">Submit page</div>
+                  <div className="main"><SubmitBlog/></div>
                 </Protected>
               }
             />

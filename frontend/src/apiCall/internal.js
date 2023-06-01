@@ -5,7 +5,8 @@ const api = axios.create({
     // baseURL: process.env.REACT_APP_INTERNAL_API_PATH,
     withCredentials: true,
     headers: {
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
+      'content-type': 'multipart/form-data',
     },
   });
   
@@ -43,4 +44,29 @@ const api = axios.create({
   
     return response;
   };
+
+  export const getAllBlogs = async () => {
+    let response;
+     try {
+      response = await api.get('/blog/all');
+     } catch (error) {
+      console.log(error);
+     }
+     console.log(response);
+     return response;
+  }
+
+  export const submitBlog = async (data) => {
+
+    let response;
+
+    try {
+      response = await api.post("/blog", data);
+    } catch (error) {
+      return error;
+    }
+  
+    return response;
+  };
+  
   

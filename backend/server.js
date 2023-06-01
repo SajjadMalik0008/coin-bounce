@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const corsOptions = {
   credentials: true,
-  origin:['http://localhost:3000']
+  origin:'http://localhost:3000'
 }
 const app = express()
 const port = PORT
@@ -21,11 +21,10 @@ app.use(router);
 app.use('/storage', express.static('storage'));
 dbConnect();
 app.use(errorHandler);
-app.get('/', (req, res) => {
-    res.json({msg: 'Hello World! this is my 1st app dfdf!'})
-  })
-
+// app.get('/', (req, res) => {
+//     res.json({msg: 'Hello World! this is my 1st app dfdf!'})
+//   })
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
-    console.log(`${router}`)
+    // console.log(`${router}`)
   })

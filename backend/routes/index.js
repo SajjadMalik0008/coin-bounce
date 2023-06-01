@@ -29,7 +29,7 @@ router.get('/refresh', authController.refresh);
 
 // CRUD
 // create
-router.post('/blog', auth, blogController.create);
+router.post('/blog', auth,  blogController.create);
 // update
 router.put('/blog', auth, blogController.update);
 
